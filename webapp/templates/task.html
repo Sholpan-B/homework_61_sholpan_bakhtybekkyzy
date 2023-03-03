@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Task{% endblock %}
+
+{% block menu %}
+    <a href="{% url 'task_add' %}">Добавить задачу</a>
+    <a href="{% url 'task_update' task.pk %}">Редактировать</a>
+    <a href="{% url 'task_delete' task.pk %}">Удалить</a>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Задача</h1>
+        <p>Заголовок: {{ task.summary }}</p>
+        <p>Описание: {{ task.description }}</p>
+        <p>Статус: {% for status in task.status.all %}{{ status }}<br>{% endfor %}</p>
+
+        <p>Тип задачи:  {% for type in task.type.all %}{{ type }}<br>{% endfor %}</p>
+
+
+
+        <p>Создано: {{ task.created_at }}</p>
+        <p>Обновлено: {{ task.updated_at }}</p>
+
+    </div>
+{% endblock %}
