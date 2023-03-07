@@ -96,6 +96,198 @@
   }
 },
 {
+  "model": "webapp.task",
+  "pk": 45,
+  "fields": {
+    "summary": "Задача 6_1",
+    "description": "Пересчет 2 сессий ggggggggggggggggggggg ffffffffffffffffffff iiiiiiiiiiiiiiiiiiiiiiiiiiiiii vvvvvvvvvvvvvvvvvv",
+    "created_at": "2023-03-07T05:17:50.912Z",
+    "updated_at": "2023-03-07T12:26:35.399Z",
+    "status": [
+      3
+    ],
+    "type": [
+      1
+    ]
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 46,
+  "fields": {
+    "summary": "Задача 7",
+    "description": "Проблема со считыванием данных из kafka topic",
+    "created_at": "2023-03-07T05:19:25.730Z",
+    "updated_at": "2023-03-07T05:19:25.730Z",
+    "status": [
+      2
+    ],
+    "type": [
+      2
+    ]
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 47,
+  "fields": {
+    "summary": "Задача 8",
+    "description": "Проблема со считыванием данных из kafka topic",
+    "created_at": "2023-03-07T05:22:59.454Z",
+    "updated_at": "2023-03-07T05:22:59.454Z",
+    "status": [
+      3
+    ],
+    "type": [
+      2
+    ]
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 48,
+  "fields": {
+    "summary": "Задача 9",
+    "description": "Пересчет http_users_users",
+    "created_at": "2023-03-07T05:25:18.142Z",
+    "updated_at": "2023-03-07T05:25:18.142Z",
+    "status": [
+      1
+    ],
+    "type": [
+      3
+    ]
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 49,
+  "fields": {
+    "summary": "Задача 10",
+    "description": "Пересчет http_users_users",
+    "created_at": "2023-03-07T05:29:51.839Z",
+    "updated_at": "2023-03-07T05:30:11.779Z",
+    "status": [
+      2
+    ],
+    "type": [
+      1
+    ]
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 50,
+  "fields": {
+    "summary": "Задача 11",
+    "description": "Подключение двух источников из БД",
+    "created_at": "2023-03-07T05:38:13.371Z",
+    "updated_at": "2023-03-07T05:38:13.371Z",
+    "status": [
+      1
+    ],
+    "type": [
+      1
+    ]
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 51,
+  "fields": {
+    "summary": "Задача 12",
+    "description": "Доработать server-access-automation; добавить выполнение заявок \"Доступ к серверам DMP (cluster)_manual\"",
+    "created_at": "2023-03-07T07:33:33.059Z",
+    "updated_at": "2023-03-07T07:33:33.059Z",
+    "status": [
+      3
+    ],
+    "type": [
+      3
+    ]
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 52,
+  "fields": {
+    "summary": "Задача 13",
+    "description": "Загрузка источника dc_payments.payment",
+    "created_at": "2023-03-07T07:35:13.049Z",
+    "updated_at": "2023-03-07T07:35:13.049Z",
+    "status": [
+      1
+    ],
+    "type": [
+      1
+    ]
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 53,
+  "fields": {
+    "summary": "Задача 14",
+    "description": "Перенести на новый загрузчик Subscriber_inf",
+    "created_at": "2023-03-07T11:47:20.100Z",
+    "updated_at": "2023-03-07T11:47:20.100Z",
+    "status": [
+      3
+    ],
+    "type": [
+      1
+    ]
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 54,
+  "fields": {
+    "summary": "Задача 15",
+    "description": "Начать выводить новый загрузчик в продакшн",
+    "created_at": "2023-03-07T11:47:55.877Z",
+    "updated_at": "2023-03-07T11:47:55.877Z",
+    "status": [
+      3
+    ],
+    "type": [
+      1
+    ]
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 55,
+  "fields": {
+    "summary": "Bug 1",
+    "description": "Проблема со считыванием данных из kafka topic",
+    "created_at": "2023-03-07T12:09:52.434Z",
+    "updated_at": "2023-03-07T12:09:52.434Z",
+    "status": [
+      2
+    ],
+    "type": [
+      2
+    ]
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 56,
+  "fields": {
+    "summary": "Bug 2",
+    "description": "Проблема со считыванием данных из kafka topic",
+    "created_at": "2023-03-07T12:10:16.942Z",
+    "updated_at": "2023-03-07T12:10:16.942Z",
+    "status": [
+      1
+    ],
+    "type": [
+      2
+    ]
+  }
+},
+{
   "model": "webapp.type",
   "pk": 1,
   "fields": {
