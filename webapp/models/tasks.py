@@ -1,5 +1,4 @@
 from django.db import models
-from django.utils import timezone
 
 
 class Task(models.Model):
@@ -23,11 +22,7 @@ class Task(models.Model):
     def __str__(self):
         return f"{self.summary} - {self.description} - {self.status} -{self.type}"
 
-    # def delete(self, using=None, keep_parents=False):
-    #     self.is_deleted = True
-    #     self.deleted_at = timezone.now()
-    #     self.save()
-
     class Meta:
         verbose_name = 'Задача'
         verbose_name_plural = 'Задачи'
+        ordering = ['created_at']
