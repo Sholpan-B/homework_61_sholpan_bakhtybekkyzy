@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %} Проект №{{ project.pk }} {% endblock %}
+
+{% block content %}
+    {% if project %}
+
+        <h3 class="pl-3 pb-2">Удаление проекта</h3>
+
+        <h1 class="text-center" style="color: red; font-size: 21px;">Вы точно хотите удалить проект? <br>"{{ project }}"?
+        </h1>
+        <form method="POST" action="{% url "confirm_delete_project" project.pk %}" class="text-center">
+            {% csrf_token %}
+            <input type="submit" value="Да" class="btn btn-danger mt-2 ml-3 mb-3">
+            <a class="btn btn-primary mt-2 ml-3 mb-3" href="{% url "project_detail" project.pk %}">нет</a>
+        </form>
+
+    {% else %}
+        <p class="mt-5 ml-3 fw-bold">Проект не найден</p>
+    {% endif %}
+{% endblock %}

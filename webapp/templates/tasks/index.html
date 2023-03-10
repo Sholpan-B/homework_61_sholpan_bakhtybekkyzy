@@ -1,9 +1,10 @@
-{% extends 'base.html' %}
-
+{% extends 'tasks/../base.html' %}
 {% block title %} Список задач {% endblock %}
-
+{% block menu %}
+    <a href="{% url 'task_add' %}">Добавить задачу</a>
+{% endblock %}
 {% block content %}
-
+    {% include 'partial/search.html' %}
     <h3 class="pl-3 pb-2">Список задач</h3>
 
     {% if tasks %}
@@ -16,13 +17,14 @@
                 <th scope="col">Статус</th>
                 <th scope="col">Тип</th>
                 <th scope="col">Дата обновления</th>
+                <th scope="col">Проект</th>
                 <th scope="col"></th>
             </tr>
             </thead>
             <tbody>
             {% for task in tasks %}
                 <tr>
-                    <td class="col-4 text-break">
+                    <td class="col-2 text-break">
 
                         <a class="list-unstyled text-dark" href="{% url 'task_detail' task.pk %}">
                             {{ task.summary }}
@@ -31,15 +33,18 @@
                     <td class="col-3">{% for status in task.status.all %}{{ status.name }}<br>{% endfor %}</td>
                     <td class="col-3">{% for type in task.type.all %}{{ type.name }}<br>{% endfor %}</td>
                     <td class="col-2">{{ task.updated_at|date:"d-m-Y H:i:s"}}</td>
+                    <td class="col-2"><a class="list-unstyled text-dark" >{{ task.project }}</a></td>
                 </tr>
+            {% empty %}
+                 <p class="mt-5 ml-3 fw-bold">Список задач пуст</p>
             {% endfor %}
             </tbody>
         </table>
-    {% else %}
-        <p class="mt-5 ml-3 fw-bold">Список задач пуст</p>
-    {% endif %}
+     {% endif %}
 </form>
-    <p><a class="btn btn-primary ml-1 mt-3 mb-1" href="{% url 'task_add' %}">Добавить новую задачу</a></p>
+    {% if is_paginated %}
+        {% include 'partial/pagination.html' %}
+    {% endif %}
 {% endblock %}
 
 

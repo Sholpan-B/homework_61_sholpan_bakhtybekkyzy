@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %} Редактирование проекта {{ project.pk }} {% endblock %}
+
+{% block content %}
+
+    <h3 class="pl-3 pb-2">Редактирование проекта</h3>
+
+    <form action="{% url 'project_update' project.pk %}" method="POST" class="ml-4">
+        {% include 'partial/project_form.html' with button_text='Сохранить' %}
+
+        <p>
+            <a href="{% url 'project_detail' project.pk %}" class="btn btn-primary mb-3">Назад</a>
+        </p>
+    </form>
+
+{% endblock %}

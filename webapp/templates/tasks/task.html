@@ -16,5 +16,6 @@
         <p>Тип задачи:  {% for type in task.type.all %}{{ type.name }}<br>{% endfor %}</p>
         <p>Создано: {{ task.created_at }}</p>
         <p>Обновлено: {{ task.updated_at }}</p>
+        <p>Проект: {{ task.project }}</p>
     </div>
 {% endblock %}

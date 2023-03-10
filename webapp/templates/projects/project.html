@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %} Проект №{{ project.pk }} {% endblock %}
+
+{% block content %}
+
+    <h3 class="pl-3 pb-2">{{ project.title }}</h3>
+
+    {% if project %}
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">Проект</th>
+                <th scope="col">Описание</th>
+                <th scope="col">Дата начала</th>
+                <th scope="col">Дата окончания</th>
+                <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="col-3 text-break">
+                    {{ project.title }}
+                </td>
+
+                {% if not project.description %}
+                    <td>
+                        ---
+                    </td>
+                {% else %}
+                    <td class="col-4 text-break">
+                        {{ project.description | linebreaks }}
+                    </td>
+                {% endif %}
+
+                <td class="col-2">{{ project.start_date }}</td>
+                <td class="col-2">{{ project.end_date}}</td>
+                <td class="col-1"><a class="btn btn-danger" href="{% url 'project_delete' project.pk %}">
+                    Удалить</a></td>
+            </tr>
+            </tbody>
+        </table>
+
+
+        <a class="btn btn-primary mt-2 ml-3 mb-3" href="{% url 'project_update' project.pk %}">Редактировать проект</a>
+        <br>
+        <a class="btn btn-primary mt-2 ml-3 mb-3" href="{% url 'project_task_add' project.pk %}">Добавить задачу к
+            проекту</a>
+
+    {% else %}
+        <p class="mt-5 ml-3 fw-bold">Проект не найден</p>
+    {% endif %}
+
+{% endblock %}
+
+{% block bottom_href %}
+
+{% endblock %}
