@@ -1,12 +1,25 @@
 [
 {
+  "model": "webapp.project",
+  "pk": 1,
+  "fields": {
+    "start_date": "2023-03-03",
+    "end_date": "2023-05-03",
+    "title": "Проект 001",
+    "description": "Описание Описание Описание Описание Описание Описание Описание Описание Описание"
+  }
+},
+{
   "model": "webapp.task",
   "pk": 1,
   "fields": {
-    "summary": "Задача 1",
-    "description": "Разработать валидацию входных/выходных данных",
+    "summary": "Задача 01",
+    "description": "Разработать валидацию входных/выходных данных Разработать валидацию входных/выходных данных Разработать валидацию входных/выходных данных",
+    "project": 1,
     "created_at": "2023-03-03T08:28:43.573Z",
-    "updated_at": "2023-03-03T12:45:04.732Z",
+    "updated_at": "2023-03-10T08:57:34.561Z",
+    "is_deleted": false,
+    "deleted_at": null,
     "status": [
       3
     ],
@@ -19,10 +32,13 @@
   "model": "webapp.task",
   "pk": 2,
   "fields": {
-    "summary": "Задача 2",
-    "description": "\"Причесать” код в соответствие с новым правилом из линтера",
+    "summary": "Задача 02",
+    "description": "\"Причесать” код в соответствие с новым правилом из линтера \"Причесать” код в соответствие с новым правилом из линтера \"Причесать” код в соответствие с новым правилом из линтера",
+    "project": 1,
     "created_at": "2023-03-03T08:29:33.086Z",
-    "updated_at": "2023-03-03T08:29:33.086Z",
+    "updated_at": "2023-03-10T08:58:10.134Z",
+    "is_deleted": false,
+    "deleted_at": null,
     "status": [
       1
     ],
@@ -35,10 +51,13 @@
   "model": "webapp.task",
   "pk": 3,
   "fields": {
-    "summary": "Задача 3",
-    "description": "Написать автотесты и т.п.",
+    "summary": "Задача 03",
+    "description": "Написать автотесты и т.п. Написать автотесты и т.п. Написать автотесты и т.п. Написать автотесты и т.п. Написать автотесты и т.п.",
+    "project": 1,
     "created_at": "2023-03-03T08:31:18.727Z",
-    "updated_at": "2023-03-03T12:45:24.290Z",
+    "updated_at": "2023-03-10T08:58:36.381Z",
+    "is_deleted": false,
+    "deleted_at": null,
     "status": [
       3
     ],
@@ -51,10 +70,13 @@
   "model": "webapp.task",
   "pk": 4,
   "fields": {
-    "summary": "Задача 4",
-    "description": "создать метакласс для реализации фабрик",
+    "summary": "Задача 04",
+    "description": "Cоздать метакласс для реализации фабрик создать метакласс для реализации фабрик создать метакласс для реализации фабрик",
+    "project": 1,
     "created_at": "2023-03-03T08:31:57.769Z",
-    "updated_at": "2023-03-03T12:45:12.234Z",
+    "updated_at": "2023-03-10T08:59:06.574Z",
+    "is_deleted": false,
+    "deleted_at": null,
     "status": [
       2
     ],
@@ -67,10 +89,13 @@
   "model": "webapp.task",
   "pk": 5,
   "fields": {
-    "summary": "Задача 5",
-    "description": "выгрузить всю структуру руководителей конкретного сотрудника",
+    "summary": "Задача 05",
+    "description": "Выгрузить всю структуру руководителей конкретного сотрудника Выгрузить всю структуру руководителей конкретного сотрудника",
+    "project": 1,
     "created_at": "2023-03-03T08:32:53.794Z",
-    "updated_at": "2023-03-03T09:39:38.260Z",
+    "updated_at": "2023-03-10T08:59:38.079Z",
+    "is_deleted": false,
+    "deleted_at": null,
     "status": [
       1
     ],
@@ -83,10 +108,13 @@
   "model": "webapp.task",
   "pk": 22,
   "fields": {
-    "summary": "Задача 6",
-    "description": "ааааааааааааааааааааааааа",
+    "summary": "Задача 06",
+    "description": "Выгрузить всю структуру руководителей конкретного сотрудника  Выгрузить всю структуру руководителей конкретного сотрудника",
+    "project": 1,
     "created_at": "2023-03-03T12:48:12.080Z",
-    "updated_at": "2023-03-03T12:48:12.080Z",
+    "updated_at": "2023-03-10T09:00:41.379Z",
+    "is_deleted": false,
+    "deleted_at": null,
     "status": [
       2
     ],
@@ -99,10 +127,13 @@
   "model": "webapp.task",
   "pk": 45,
   "fields": {
-    "summary": "Задача 6_1",
+    "summary": "Задача 06_1",
     "description": "Пересчет 2 сессий ggggggggggggggggggggg ffffffffffffffffffff iiiiiiiiiiiiiiiiiiiiiiiiiiiiii vvvvvvvvvvvvvvvvvv",
+    "project": 1,
     "created_at": "2023-03-07T05:17:50.912Z",
-    "updated_at": "2023-03-07T12:26:35.399Z",
+    "updated_at": "2023-03-10T09:01:01.957Z",
+    "is_deleted": false,
+    "deleted_at": null,
     "status": [
       3
     ],
@@ -115,10 +146,13 @@
   "model": "webapp.task",
   "pk": 46,
   "fields": {
-    "summary": "Задача 7",
-    "description": "Проблема со считыванием данных из kafka topic",
+    "summary": "Задача 07",
+    "description": "Проблема со считыванием данных из kafka topic Проблема со считыванием данных из kafka topic Проблема со считыванием данных из kafka topic",
+    "project": 1,
     "created_at": "2023-03-07T05:19:25.730Z",
-    "updated_at": "2023-03-07T05:19:25.730Z",
+    "updated_at": "2023-03-10T09:01:22.467Z",
+    "is_deleted": false,
+    "deleted_at": null,
     "status": [
       2
     ],
@@ -131,10 +165,13 @@
   "model": "webapp.task",
   "pk": 47,
   "fields": {
-    "summary": "Задача 8",
-    "description": "Проблема со считыванием данных из kafka topic",
+    "summary": "Задача 08",
+    "description": "Проблема со считыванием данных из kafka topic Проблема со считыванием данных из kafka topic Проблема со считыванием данных из kafka topic",
+    "project": 1,
     "created_at": "2023-03-07T05:22:59.454Z",
-    "updated_at": "2023-03-07T05:22:59.454Z",
+    "updated_at": "2023-03-10T09:01:48.235Z",
+    "is_deleted": false,
+    "deleted_at": null,
     "status": [
       3
     ],
@@ -147,10 +184,13 @@
   "model": "webapp.task",
   "pk": 48,
   "fields": {
-    "summary": "Задача 9",
-    "description": "Пересчет http_users_users",
+    "summary": "Задача 09",
+    "description": "Пересчет http_users_users Пересчет http_users_users Пересчет http_users_users Пересчет http_users_users",
+    "project": 1,
     "created_at": "2023-03-07T05:25:18.142Z",
-    "updated_at": "2023-03-07T05:25:18.142Z",
+    "updated_at": "2023-03-10T09:02:16.298Z",
+    "is_deleted": false,
+    "deleted_at": null,
     "status": [
       1
     ],
@@ -163,10 +203,13 @@
   "model": "webapp.task",
   "pk": 49,
   "fields": {
-    "summary": "Задача 10",
-    "description": "Пересчет http_users_users",
+    "summary": "Задача 010",
+    "description": "Пересчет http_users_users Пересчет http_users_users Пересчет http_users_users Пересчет http_users_users",
+    "project": 1,
     "created_at": "2023-03-07T05:29:51.839Z",
-    "updated_at": "2023-03-07T05:30:11.779Z",
+    "updated_at": "2023-03-10T09:03:04.973Z",
+    "is_deleted": false,
+    "deleted_at": null,
     "status": [
       2
     ],
@@ -179,10 +222,13 @@
   "model": "webapp.task",
   "pk": 50,
   "fields": {
-    "summary": "Задача 11",
-    "description": "Подключение двух источников из БД",
+    "summary": "Задача 011",
+    "description": "Подключение двух источников из БД Подключение двух источников из БД Подключение двух источников из БД",
+    "project": 1,
     "created_at": "2023-03-07T05:38:13.371Z",
-    "updated_at": "2023-03-07T05:38:13.371Z",
+    "updated_at": "2023-03-10T09:03:40.890Z",
+    "is_deleted": false,
+    "deleted_at": null,
     "status": [
       1
     ],
@@ -195,10 +241,13 @@
   "model": "webapp.task",
   "pk": 51,
   "fields": {
-    "summary": "Задача 12",
+    "summary": "Задача 012",
     "description": "Доработать server-access-automation; добавить выполнение заявок \"Доступ к серверам DMP (cluster)_manual\"",
+    "project": 1,
     "created_at": "2023-03-07T07:33:33.059Z",
-    "updated_at": "2023-03-07T07:33:33.059Z",
+    "updated_at": "2023-03-10T09:04:10.217Z",
+    "is_deleted": false,
+    "deleted_at": null,
     "status": [
       3
     ],
@@ -211,10 +260,13 @@
   "model": "webapp.task",
   "pk": 52,
   "fields": {
-    "summary": "Задача 13",
-    "description": "Загрузка источника dc_payments.payment",
+    "summary": "Задача 013",
+    "description": "Загрузка источника dc_payments.payment Загрузка источника dc_payments.payment Загрузка источника dc_payments.payment",
+    "project": 1,
     "created_at": "2023-03-07T07:35:13.049Z",
-    "updated_at": "2023-03-07T07:35:13.049Z",
+    "updated_at": "2023-03-10T09:04:30.818Z",
+    "is_deleted": false,
+    "deleted_at": null,
     "status": [
       1
     ],
@@ -227,10 +279,13 @@
   "model": "webapp.task",
   "pk": 53,
   "fields": {
-    "summary": "Задача 14",
-    "description": "Перенести на новый загрузчик Subscriber_inf",
+    "summary": "Задача 014",
+    "description": "Перенести на новый загрузчик Subscriber_inf Перенести на новый загрузчик Subscriber_inf Перенести на новый загрузчик Subscriber_inf",
+    "project": 1,
     "created_at": "2023-03-07T11:47:20.100Z",
-    "updated_at": "2023-03-07T11:47:20.100Z",
+    "updated_at": "2023-03-10T09:04:50.979Z",
+    "is_deleted": false,
+    "deleted_at": null,
     "status": [
       3
     ],
@@ -243,10 +298,13 @@
   "model": "webapp.task",
   "pk": 54,
   "fields": {
-    "summary": "Задача 15",
-    "description": "Начать выводить новый загрузчик в продакшн",
+    "summary": "Задача 015",
+    "description": "Начать выводить новый загрузчик в продакшн Начать выводить новый загрузчик в продакшн Начать выводить новый загрузчик в продакшн",
+    "project": 1,
     "created_at": "2023-03-07T11:47:55.877Z",
-    "updated_at": "2023-03-07T11:47:55.877Z",
+    "updated_at": "2023-03-10T09:05:35.187Z",
+    "is_deleted": false,
+    "deleted_at": null,
     "status": [
       3
     ],
@@ -259,10 +317,13 @@
   "model": "webapp.task",
   "pk": 55,
   "fields": {
-    "summary": "Bug 1",
-    "description": "Проблема со считыванием данных из kafka topic",
+    "summary": "Bug 01",
+    "description": "Проблема со считыванием данных из kafka topic Проблема со считыванием данных из kafka topic Проблема со считыванием данных из kafka topic",
+    "project": 1,
     "created_at": "2023-03-07T12:09:52.434Z",
-    "updated_at": "2023-03-07T12:09:52.434Z",
+    "updated_at": "2023-03-10T09:05:56.026Z",
+    "is_deleted": false,
+    "deleted_at": null,
     "status": [
       2
     ],
@@ -275,15 +336,94 @@
   "model": "webapp.task",
   "pk": 56,
   "fields": {
-    "summary": "Bug 2",
-    "description": "Проблема со считыванием данных из kafka topic",
+    "summary": "Bug 02",
+    "description": "Проблема со считыванием данных из kafka topic Проблема со считыванием данных из kafka topic Проблема со считыванием данных из kafka topic",
+    "project": 1,
     "created_at": "2023-03-07T12:10:16.942Z",
-    "updated_at": "2023-03-07T12:10:16.942Z",
+    "updated_at": "2023-03-10T09:06:20.804Z",
+    "is_deleted": false,
+    "deleted_at": null,
     "status": [
       1
     ],
     "type": [
       2
+    ]
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 57,
+  "fields": {
+    "summary": "aaaaaaaaaaaaaaaaaaa",
+    "description": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg",
+    "project": null,
+    "created_at": "2023-03-09T19:32:09.235Z",
+    "updated_at": "2023-03-10T09:06:29.417Z",
+    "is_deleted": true,
+    "deleted_at": "2023-03-10T09:06:29.417Z",
+    "status": [
+      2
+    ],
+    "type": [
+      2
+    ]
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 58,
+  "fields": {
+    "summary": "fffffffffffffffffff",
+    "description": "ffggggggggggggggggggggggggggggggggaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "project": null,
+    "created_at": "2023-03-09T19:33:08.516Z",
+    "updated_at": "2023-03-10T09:06:40.976Z",
+    "is_deleted": true,
+    "deleted_at": "2023-03-10T09:06:40.976Z",
+    "status": [
+      2
+    ],
+    "type": [
+      2
+    ]
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 59,
+  "fields": {
+    "summary": "aaaccccccccccccccccc",
+    "description": "ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+    "project": null,
+    "created_at": "2023-03-09T19:33:54.792Z",
+    "updated_at": "2023-03-10T09:06:34.631Z",
+    "is_deleted": true,
+    "deleted_at": "2023-03-10T09:06:34.631Z",
+    "status": [
+      1
+    ],
+    "type": [
+      1
+    ]
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 60,
+  "fields": {
+    "summary": "gggggggggggg",
+    "description": "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "project": 1,
+    "created_at": "2023-03-10T11:16:55.384Z",
+    "updated_at": "2023-03-10T11:16:55.384Z",
+    "is_deleted": false,
+    "deleted_at": null,
+    "status": [
+      2
+    ],
+    "type": [
+      1
     ]
   }
 },
@@ -939,6 +1079,42 @@
     "name": "Can view type",
     "content_type": 17,
     "codename": "view_type"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 69,
+  "fields": {
+    "name": "Can add Проект",
+    "content_type": 18,
+    "codename": "add_project"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 70,
+  "fields": {
+    "name": "Can change Проект",
+    "content_type": 18,
+    "codename": "change_project"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 71,
+  "fields": {
+    "name": "Can delete Проект",
+    "content_type": 18,
+    "codename": "delete_project"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 72,
+  "fields": {
+    "name": "Can view Проект",
+    "content_type": 18,
+    "codename": "view_project"
   }
 },
 {
