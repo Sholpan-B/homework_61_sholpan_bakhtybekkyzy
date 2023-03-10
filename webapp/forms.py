@@ -2,7 +2,8 @@ from django import forms
 from django.core.exceptions import ValidationError
 from django.core.validators import MinLengthValidator, BaseValidator
 
-from webapp.models import Task
+from webapp.models import Task, Status
+from webapp.models.project import Project
 
 
 def max_len_validator(string):
@@ -32,12 +33,13 @@ class TaskForm(forms.ModelForm):
 
     class Meta:
         model = Task
-        fields = ('summary', 'description', 'status', 'type')
+        fields = ('summary', 'description', 'status', 'type', 'project')
         labels = {
             'summary': 'Заголовок задачи',
             'description': 'Описание',
             'status': 'Статус',
-            'type': 'Тип задачи'
+            'type': 'Тип задачи',
+            'project': 'Проект'
         }
 
     def clean_summary(self):
@@ -45,3 +47,31 @@ class TaskForm(forms.ModelForm):
         if Task.objects.filter(summary=summary).exists():
             raise ValidationError('Такой заголовок уже есть!')
         return summary
+
+
+class SearchForm(forms.Form):
+    search = forms.CharField(max_length=20, required=False, label='Поиск по задачам:')
+
+
+class ProjectForm(forms.ModelForm):
+    class Meta:
+        model = Project
+        fields = [
+            "title",
+            "description",
+            "start_date",
+            "end_date",
+        ]
+
+
+# class ProjectTaskForm(forms.ModelForm):
+#     status = forms.ModelChoiceField(queryset=Status.objects.all(), initial=Status.objects.filter(name="New"))
+#
+#     class Meta:
+#         model = Task
+#         fields = [
+#             "summary",
+#             "description",
+#             "status",
+#             "type",
+#         ]
