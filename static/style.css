@@ -18,11 +18,11 @@ body{
 }
 
 .menu {
-    font-size: 14px;
+    font-size: 20px;
     line-height: 1;
     padding: 0;
     margin: 0;
-    display: inline-block;
+    display: block;
     color: #fffee8;
 }
 
@@ -30,7 +30,9 @@ body{
     margin: 0 auto;
     width: 1200px;
 }
-
+.menu-right {
+    float: right;
+}
 
 .menu li {
     display: inline-block;
