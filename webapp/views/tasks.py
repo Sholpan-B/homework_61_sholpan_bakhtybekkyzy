@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse, reverse_lazy
 from django.views.generic import DetailView, CreateView, UpdateView, DeleteView
 
@@ -10,7 +11,7 @@ class TaskDetailView(DetailView):
     model = Task
 
 
-class TaskAddView(CreateView):
+class TaskAddView(LoginRequiredMixin, CreateView):
     template_name = 'tasks/task_add.html'
     model = Task
     form_class = TaskForm
@@ -19,7 +20,7 @@ class TaskAddView(CreateView):
         return reverse('task_detail', kwargs={'pk': self.object.pk})
 
 
-class TaskUpdateView(UpdateView):
+class TaskUpdateView(LoginRequiredMixin, UpdateView):
     template_name = 'tasks/task_update.html'
     form_class = TaskForm
     model = Task
@@ -29,7 +30,7 @@ class TaskUpdateView(UpdateView):
         return reverse('task_detail', kwargs={'pk': self.object.pk})
 
 
-class TaskDeleteView(DeleteView):
+class TaskDeleteView(LoginRequiredMixin, DeleteView):
     template_name = 'tasks/task_confirm_delete.html'
     model = Task
     success_url = reverse_lazy('index')

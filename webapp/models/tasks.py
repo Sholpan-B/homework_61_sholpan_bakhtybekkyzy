@@ -1,9 +1,6 @@
 from django.db import models
 from django.utils import timezone
 
-from webapp.managers import TaskManager
-from webapp.models.project import Project
-
 
 class Task(models.Model):
     summary = models.CharField(max_length=300, null=False, blank=False, verbose_name='Заголовок')
