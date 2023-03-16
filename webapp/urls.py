@@ -1,5 +1,6 @@
 from django.urls import path
 
+from accounts.views import login_view, logout_view
 from webapp.views.base import IndexView, IndexRedirectView
 from webapp.views.projects import ProjectsView, ProjectAddView, ProjectDetailView, ProjectUpdateView, ProjectDeleteView
 from webapp.views.tasks import TaskDetailView, TaskAddView, TaskUpdateView, TaskDeleteView
@@ -18,5 +19,7 @@ urlpatterns = [
     path('projects/<int:pk>/add-task/', TaskAddView.as_view(), name='project_task_add'),
     path('projects/<int:pk>/edit/', ProjectUpdateView.as_view(), name='project_update'),
     path('projects/<int:pk>/delete/', ProjectDeleteView.as_view(), name='project_delete'),
-    path('tasks/<int:pk>/confirm-delete-project/', ProjectDeleteView.as_view(), name='confirm_delete_project')
+    path('tasks/<int:pk>/confirm-delete-project/', ProjectDeleteView.as_view(), name='confirm_delete_project'),
+    path('accounts/login/', login_view, name='login'),
+    path('accounts/logout/', logout_view, name='logout' )
 ]
