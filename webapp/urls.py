@@ -21,5 +21,5 @@ urlpatterns = [
     path('projects/<int:pk>/delete/', ProjectDeleteView.as_view(), name='project_delete'),
     path('tasks/<int:pk>/confirm-delete-project/', ProjectDeleteView.as_view(), name='confirm_delete_project'),
     path('accounts/login/', login_view, name='login'),
-    path('accounts/logout/', logout_view, name='logout' )
+    path('accounts/logout/', logout_view, name='logout')
 ]
