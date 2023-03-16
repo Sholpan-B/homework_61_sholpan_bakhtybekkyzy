@@ -14,16 +14,21 @@
 <nav class="navbar">
     <div class="container">
         <ul class="menu">
-            <li>
-                <a href="{% url 'index' %}">На главную</a>
-
-            </li>
-        <li>
-                <a href="{% url 'projects' %}">Проекты</a>
-                {% block menu %}{% endblock %}
-            </li>
+            <li><a href="{% url 'index' %}">На главную</a></li>
+            <li><a href="{% url 'projects' %}">Проекты</a></li>
         </ul>
-    </div>
+            <ul class="menu">
+                {% if user.is_authenticated %}
+                    {% block menu %}{% endblock %}
+                    <li class="menu-right" style="float: right">
+                        <a href="{% url 'logout' %}" class="btn btn-danger">Выход</a>
+                    </li>
+                    <li class="menu-right">Привет,{{ user.username }}!</li>
+                {% else %}
+                    <li class="menu-right"><a href="{% url 'login' %}" class="btn btn-success">Вход</a></li>
+                {% endif %}
+            </ul>
+        </div>
 </nav>
 <div class="container">
     {% block content %}{% endblock %}
